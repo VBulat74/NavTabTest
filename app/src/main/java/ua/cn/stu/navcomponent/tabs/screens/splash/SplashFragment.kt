@@ -1,11 +1,14 @@
 package ua.cn.stu.navcomponent.tabs.screens.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import ua.cn.stu.navcomponent.tabs.R
 import ua.cn.stu.navcomponent.tabs.Repositories
 import ua.cn.stu.navcomponent.tabs.databinding.FragmentSplashBinding
+import ua.cn.stu.navcomponent.tabs.screens.main.MainActivity
+import ua.cn.stu.navcomponent.tabs.screens.main.MainActivityArgs
 import ua.cn.stu.navcomponent.tabs.utils.observeEvent
 import ua.cn.stu.navcomponent.tabs.utils.viewModelCreator
 
@@ -26,7 +29,13 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
     }
 
     private fun launchMainScreen(isSignedIn: Boolean) {
-        TODO("Launch MainActivity here and send isSignedIn flag to it")
+        val intent = Intent (requireContext(),MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
+        val args = MainActivityArgs(isSignedIn)
+
+        intent.putExtras(args.toBundle())
+        startActivity(intent)
     }
 
     private fun renderAnimations() {

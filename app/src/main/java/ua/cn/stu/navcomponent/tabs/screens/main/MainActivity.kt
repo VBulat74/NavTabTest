@@ -132,7 +132,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isSignedIn(): Boolean {
-        TODO("Extract isSignedIn flag from extras bundle here")
+        val bundle = intent.extras ?: throw IllegalStateException ("No required arguments")
+        val args = MainActivityArgs.fromBundle(bundle)
+        return args.isSignedIn
     }
 
     private fun getMainNavigationGraphId(): Int {
