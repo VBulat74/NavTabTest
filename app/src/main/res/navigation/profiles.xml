@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profiles"
-    app:startDestination="@id/editProfileFragment2">
+    app:startDestination="@id/profileFragment">
 
     <fragment
-        android:id="@+id/editProfileFragment2"
-        android:name="ua.cn.stu.navcomponent.tabs.screens.main.tabs.profile.EditProfileFragment"
-        android:label="fragment_edit_profile"
-        tools:layout="@layout/fragment_edit_profile" />
+        android:id="@+id/profileFragment"
+        android:name="ua.cn.stu.navcomponent.tabs.screens.main.tabs.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
