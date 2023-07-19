@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NavTabs">
 
-        <!-- TODO: Make sure that SplashActivity has android:exported='true' attribute and
-                   contains intent-filter: MAIN/LAUNCHER -->
         <activity
             android:name="ua.cn.stu.navcomponent.tabs.SplashActivity"
             android:theme="@style/SplashActivity"

@@ -2,19 +2,16 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 
-    // todo: add safe-args plugin here: androidx.navigation.safeargs.kotlin
     id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
-    // todo: use compileSdkVersion >= 31
     namespace 'ua.cn.stu.navcomponent.tabs'
     compileSdkVersion 33
 
     defaultConfig {
         applicationId "ua.cn.stu.navcomponent.tabs"
         minSdkVersion 24
-        // todo: use targetSdkVersion >= 31
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -55,9 +52,6 @@ dependencies {
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
-    // todo: add nav component libraries here:
-    //       1) 'androidx.navigation:navigation-fragment-ktx'
-    //       2) 'androidx.navigation:navigation-ui-ktx'
     implementation "androidx.navigation:navigation-fragment-ktx:2.6.0"
     implementation "androidx.navigation:navigation-ui-ktx:2.6.0"
 }
